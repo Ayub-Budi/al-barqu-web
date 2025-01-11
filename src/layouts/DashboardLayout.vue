@@ -1,11 +1,12 @@
 <template>
-  <div class="w-screen h-[75px] bg-blue-200 flex justify-center items-center">
-    <router-link to="/home" class="link">Home</router-link>
-    <router-link to="/user" class="link">User</router-link>
-    <div class="link" @click="authStore.logout()">Logout</div>
-  </div>
-  <div class="p-5">
-    <slot />
+  <div class=" h-screen w-screen overflow-hidden bg-primary-100 flex">
+    <DashboardSidebar />
+    <div class="flex-1">
+      <DashboardNavbar />
+      <div class="p-5 overflow-auto">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,3 +30,4 @@ export default {
     @apply px-2 cursor-pointer hover:text-primary-400;
   }
 </style>
+  
