@@ -16,6 +16,12 @@
         <a>
           Artikel
         </a>
+        <a>
+          Pengumuman
+        </a>
+        <a>
+          kontak
+        </a>
       </div>
       <div>
           <router-link to="/login">
