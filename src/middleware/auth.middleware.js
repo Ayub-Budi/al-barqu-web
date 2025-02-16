@@ -15,7 +15,7 @@ export default ({ to, from, next }) => {
     auth.returnUrl = to.fullPath;
 
     return next({
-      name: 'login',
+      name: "login",
     });
   }
 

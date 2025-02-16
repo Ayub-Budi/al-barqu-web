@@ -4,9 +4,10 @@ import middlewarePipeline from '@/middleware/middlewarePipeline.js';
 import main from './main';
 import auth from './auth';
 import landing from './landing';
+import dashboard from './dashboard';
 
 
-const arr_routes = [main, auth, landing];
+const arr_routes = [main, auth, landing, dashboard];
 
 const routes = arr_routes.flat(1);
 

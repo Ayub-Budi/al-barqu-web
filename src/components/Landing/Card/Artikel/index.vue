@@ -6,24 +6,32 @@
           <div class="absolute w-[18px] h-[18px] rounded-tl-full border-t-[6px] border-l-[6px] border-white top-[-6px] right-[-12px]"></div>
           <div class="absolute w-[18px] h-[18px] rounded-tl-full border-t-[6px] border-l-[6px] border-white bottom-[-12px] left-[-6px]"></div>
           <p>
-            12/05/2024
+            {{ $dateFormat(data?.created_at, 'DD/MM/YYYY') }}
           </p>
         </div>
       </div>
-      <div class="w-full h-full bg-blue-600 object-cover"></div>
+      <div class="w-full h-full bg-blue-600">
+        <img :src="data?.image" alt="" class="w-full h-full object-cover">
+      </div>
     </div>
     <div class="p-[12px] flex flex-col gap-2 ">
-      <p class="text-[20px] font-semibold">
-        Title
+      <p class="text-[20px] font-semibold line-clamp-3">
+        {{ data?.title }}
       </p>
-      <p class="text-[16px]">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quia enim eos error nihil delectus perferendis, magni velit unde nam in, ut modi minus optio reiciendis impedit iusto, autem a?
+      <p class="text-[16px] line-clamp-3">
+        {{ data?.content }}
       </p>
     </div>
   </div>
 </template>
 <script>
 export default {
+  props: {
+    data: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 <style>

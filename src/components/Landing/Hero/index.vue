@@ -3,10 +3,10 @@
     <LandingContainer class="flex justify-around ">
       <div class="flex flex-col justify-center">
         <p class="text-[50px] font-bold">
-          Selamat datang
+          {{ store.datas?.hero?.title }}
         </p>
         <p class=" text-[16px]">
-          website resmi majelis taklim Al-Barqu
+          {{ store.datas?.hero?.subtitle }}
         </p>
       </div>
       <div>
@@ -17,6 +17,12 @@
 </template>
 <script>
 export default {
+  props: {
+    store: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 <style>

@@ -17,7 +17,7 @@ export default [{
     meta: {
       title: 'Home',
       layout: DashboardLayout,
-      // middleware: [AuthMiddleware],
+      middleware: [AuthMiddleware],
     },
   },
   {
@@ -27,7 +27,7 @@ export default [{
     meta: {
       title: 'User',
       layout: DashboardLayout,
-      // middleware: [AuthMiddleware],
+      middleware: [AuthMiddleware],
     },
   },
   {
@@ -37,7 +37,7 @@ export default [{
     meta: {
       title: 'User Create',
       layout: DashboardLayout,
-      // middleware: [AuthMiddleware],
+      middleware: [AuthMiddleware],
     },
   },
   {
@@ -47,7 +47,7 @@ export default [{
     meta: {
       title: 'User Update',
       layout: ExampleLayout,
-      // middleware: [AuthMiddleware],
+      middleware: [AuthMiddleware],
     },
   }
 ]

@@ -8,11 +8,7 @@
         Berikut adalah dokumen tasi kegiatan kami
       </p>
       <div class="grid grid-cols-3 grid-flow-row gap-4">
-        <LandingCardArtikel />
-        <LandingCardArtikel />
-        <LandingCardArtikel />
-        <LandingCardArtikel />
-        <LandingCardArtikel />
+        <LandingCardArtikel v-for="item in store?.datas?.articles" :key="item.id" :data="item" />
         <div class="flex flex-col items-center justify-center gap-3">
           <p class="text-[24px] font-semibold">
             Artikel Lainnya
@@ -27,7 +23,12 @@
 </template>
 <script>
 export default {
-    
+  props: {
+    store: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 <style>

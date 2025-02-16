@@ -6,15 +6,28 @@
           Pengumuman
         </P>
 
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem itaque perferendis, eaque ipsam ipsa quam inventore consectetur commodi omnis doloribus sapiente fugit. Numquam ipsa doloremque explicabo incidunt perspiciatis ipsam ullam.
-        </p>
+        <div class="flex flex-col gap-3">
+          <div v-for="(item, index) in store.datas?.announcements" :key="index" class="flex gap-2">
+            <p>
+              {{ $dateFormat(item?.created_at, 'DD/MM/YYYY') }}
+            </p>
+            <p class="text-[16px] font-semibold">
+              {{ item?.content }}
+            </p>
+          </div>
+        </div>
       </div>
     </LandingContainer>
   </div>
 </template>
 <script>
 export default {
+  props: {
+    store: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 <style>
