@@ -2,7 +2,7 @@
   <div>
     <LandingContainer class=" py-[100px] flex gap-10">
       <div>
-        <div class="w-[500px] h-[500px] bg-slate-300"></div>
+        <img :src="store.datas?.about?.image" alt="about" class="w-[500px] object-cover">
       </div>
       <div>
         <p class="text-[24px] font-bold">
