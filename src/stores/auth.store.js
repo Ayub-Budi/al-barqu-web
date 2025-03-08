@@ -21,7 +21,7 @@ export const useAuthStore = defineStore({
 
                 localStorage.setItem('user', JSON.stringify(user.data));
 
-                router.push('/home');
+                router.push('/dashboard');
             }
         },
         async register(data) {

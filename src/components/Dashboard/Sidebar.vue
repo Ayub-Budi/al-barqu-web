@@ -6,11 +6,11 @@
     <div class="flex flex-col p-3 gap-3">
       <div class="w-full p-1 flex gap-3">
         <i class="ri-dashboard-line"></i>
-        <a href="" class="text-[18px] font-semibold ">Dashboard</a>
+        <a href="/dashboard" class="text-[18px] font-semibold ">Dashboard</a>
       </div>
       <div class="w-full p-1 flex gap-3">
         <i class="ri-profile-fill"></i>
-        <a href="" class="text-[18px] font-semibold">Banner</a>
+        <a href="/banner" class="text-[18px] font-semibold">Banner</a>
       </div>
       <div class="w-full p-1 flex gap-3">
         <i class="ri-community-line"></i>

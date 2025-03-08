@@ -10,7 +10,7 @@
         </p>
       </div>
       <div>
-        <div class=" bg-slate-300 w-[300px] h-[300px]"></div>
+        <img :src="store.datas?.hero?.image" alt="hero" class="w-[300px] object-cover" v-if="store.datas?.hero?.image">
       </div>
     </LandingContainer>
   </div>

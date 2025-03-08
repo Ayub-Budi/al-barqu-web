@@ -1,4 +1,5 @@
 import DashboardView from '@/views/dashboard/index.vue'
+import BannerView from '@/views/banner/index.vue'
 
 import DashboardLayout from '@/layouts/DashboardLayout.vue';
 
@@ -15,5 +16,14 @@ export default [{
       layout: DashboardLayout,
       // middleware: [AuthMiddleware],
     },
-  },
+  },{
+    path: '/banner',
+    name: 'banner',
+    component: BannerView,
+    meta: {
+      title: 'banner',
+      layout: DashboardLayout,
+      // middleware: [AuthMiddleware],
+    },
+  }
 ]

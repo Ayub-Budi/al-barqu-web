@@ -4,7 +4,7 @@ export default ({ to, from, next }) => {
   const auth = useAuthStore();
   if (auth.user) {
     return next({
-      name: 'home',
+      name: 'dashboard',
     });
   }
 
