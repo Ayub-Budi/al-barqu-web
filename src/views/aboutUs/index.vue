@@ -1,15 +1,13 @@
 <template>
   <div class="flex flex-col gap-6">
-    <TextTitle title="Banner" content="Buatlah banner dengan lebih menarik" />
+    <TextTitle title="About Us" subtitle="Buatlah deskripsi yang menjelaskan tentang El-Batros" />
 
     <div class="flex justify-center gap-3 bg-primary-200">
       <div class="flex flex-col justify-center gap-2 p-3">
         <p class="text-[30px] font-bold">
           About Us
         </p>
-        <p class="text-[16px] max-w-[600px]">
-          {{ store.data?.content }}
-        </p>
+        <p class="text-[16px] max-w-[700px]" v-html="store.data?.content"></p>
       </div>
 
       <img :src="store.data?.image" alt="" class="w-[300px] object-cover" />
@@ -61,6 +59,15 @@ export default {
 
     this.form.title = this.store.data.title;
     this.form.content = this.store.data.content;
+  },
+  computed: {
+    formattedContent() {
+      return this.store.data?.content
+        .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>") // **bold** → <b>bold</b>
+        .replace(/_(.*?)_/g, "<i>$1</i>") // _italic_ → <i>italic</i>
+        .replace(/~~(.*?)~~/g, "<del>$1</del>") // ~~coret~~ → <del>coret</del>
+        .replace(/\r\n|\n/g, "<br>"); // Enter → <br>
+    },
   },
   methods: {
     simpan() {

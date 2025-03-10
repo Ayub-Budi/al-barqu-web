@@ -1,6 +1,9 @@
 import DashboardView from '@/views/dashboard/index.vue'
 import BannerView from '@/views/banner/index.vue'
 import AboutUsView from '@/views/aboutUs/index.vue'
+import ArtikelView from '@/views/artikel/index.vue'
+import DetailArtikelView from '@/views/artikel/detail.vue'
+import AddArtikelView from '@/views/artikel/add.vue'
 
 import DashboardLayout from '@/layouts/DashboardLayout.vue';
 
@@ -13,27 +16,54 @@ export default [{
     name: 'dashboard',
     component: DashboardView,
     meta: {
-      title: 'dashboard',
+      title: 'Dashboard',
       layout: DashboardLayout,
-      // middleware: [AuthMiddleware],
+      middleware: [AuthMiddleware],
     },
   },{
-    path: '/banner',
+    path: '/dashboard/banner',
     name: 'banner',
     component: BannerView,
     meta: {
-      title: 'banner',
+      title: 'Banner',
       layout: DashboardLayout,
-      // middleware: [AuthMiddleware],
+      middleware: [AuthMiddleware],
     },
   },{
-    path: '/about-us',
+    path: '/dashboard/about-us',
     name: 'about-us',
     component: AboutUsView,
     meta: {
-      title: 'about-us',
+      title: 'About-us',
       layout: DashboardLayout,
-      // middleware: [AuthMiddleware],
+      middleware: [AuthMiddleware],
+    },
+  },{
+    path: '/dashboard/artikel',
+    name: 'artikel',
+    component: ArtikelView,
+    meta: {
+      title: 'Artikel',
+      layout: DashboardLayout,
+      middleware: [AuthMiddleware],
+    },
+  },{
+    path: '/dashboard/artikel/:id',
+    name: 'detail.artikel',
+    component: DetailArtikelView,
+    meta: {
+      title: 'Detail Artikel',
+      layout: DashboardLayout,
+      middleware: [AuthMiddleware],
+    },
+  },{
+    path: '/dashboard/artikel/add',
+    name: 'add.artikel',
+    component: AddArtikelView,
+    meta: {
+      title: 'Add Artikel',
+      layout: DashboardLayout,
+      middleware: [AuthMiddleware],
     },
   }
 ]

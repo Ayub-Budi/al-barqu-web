@@ -25,4 +25,8 @@ app.config.globalProperties.$dateFormat = (value, format) => {
     return moment(value).format(format);
 }
 
+app.config.globalProperties.$initialsName = (name) => {
+    return name.match(/\b\w/g).slice(0, 2).join('');
+}
+
 app.mount('#app')
