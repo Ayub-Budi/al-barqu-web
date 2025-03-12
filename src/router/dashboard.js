@@ -4,6 +4,7 @@ import AboutUsView from '@/views/aboutUs/index.vue'
 import ArtikelView from '@/views/artikel/index.vue'
 import DetailArtikelView from '@/views/artikel/detail.vue'
 import AddArtikelView from '@/views/artikel/add.vue'
+import PengumumanView from '@/views/pengumuman/index.vue'
 
 import DashboardLayout from '@/layouts/DashboardLayout.vue';
 
@@ -65,5 +66,15 @@ export default [{
       layout: DashboardLayout,
       middleware: [AuthMiddleware],
     },
+  },{
+    path: '/dashboard/pengumuman',
+    name: 'pengumuman',
+    component: PengumumanView,
+    meta: {
+      title: 'Add Artikel',
+      layout: DashboardLayout,
+      middleware: [AuthMiddleware],
+    },
   }
+
 ]
